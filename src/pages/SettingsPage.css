@@ -1,0 +1,139 @@
+.settings-page {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: var(--space-lg);
+    overflow-y: auto;
+    padding-bottom: var(--space-xl);
+}
+
+.settings-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.settings-header h1 {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-semibold);
+    margin: 0;
+}
+
+.settings-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+    max-width: 600px;
+}
+
+.settings-section {
+    padding: var(--space-lg);
+}
+
+.settings-section h2 {
+    font-size: var(--font-size-lg);
+    margin: 0 0 var(--space-xs) 0;
+}
+
+.section-desc {
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+    margin: 0 0 var(--space-lg) 0;
+}
+
+.setting-item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-lg);
+}
+
+.setting-item:last-child {
+    margin-bottom: 0;
+}
+
+.setting-item label {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-primary);
+}
+
+.setting-input {
+    width: 100%;
+}
+
+.setting-hint {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-tertiary);
+}
+
+.setting-item.readonly .setting-value {
+    padding: var(--space-sm) var(--space-md);
+    background: var(--color-bg-tertiary);
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+}
+
+.setting-value-url {
+    word-break: break-all;
+    font-family: ui-monospace, monospace;
+    font-size: var(--font-size-xs) !important;
+}
+
+/* About section */
+.about-info {
+    display: flex;
+    align-items: center;
+    gap: var(--space-lg);
+    margin-bottom: var(--space-lg);
+}
+
+.app-icon {
+    font-size: 48px;
+}
+
+.app-details h3 {
+    margin: 0;
+    font-size: var(--font-size-lg);
+}
+
+.app-details p {
+    margin: var(--space-xs) 0 0;
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+}
+
+.app-details .version {
+    color: var(--color-text-tertiary);
+    font-size: var(--font-size-xs);
+}
+
+.about-features {
+    margin-bottom: var(--space-lg);
+}
+
+.about-features h4 {
+    margin: 0 0 var(--space-sm) 0;
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+}
+
+.about-features ul {
+    margin: 0;
+    padding-left: var(--space-lg);
+    list-style: none;
+}
+
+.about-features li {
+    padding: var(--space-xs) 0;
+    font-size: var(--font-size-sm);
+}
+
+.about-footer {
+    margin: 0;
+    font-size: var(--font-size-xs);
+    color: var(--color-text-tertiary);
+    padding-top: var(--space-md);
+    border-top: 1px solid var(--color-border);
+}

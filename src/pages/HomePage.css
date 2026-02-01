@@ -1,0 +1,20 @@
+.home-page {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 0;
+    gap: var(--space-md);
+}
+
+.status-bar {
+    display: flex;
+    align-items: center;
+    padding: var(--space-sm) var(--space-md);
+    background: var(--color-bg-secondary);
+    border-radius: var(--radius-md);
+}
+
+.status-text {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+}

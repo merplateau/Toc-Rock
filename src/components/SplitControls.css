@@ -1,0 +1,99 @@
+.split-controls {
+    padding: var(--space-lg);
+    margin-top: auto;
+}
+
+.controls-row {
+    display: flex;
+    align-items: flex-end;
+    gap: var(--space-xl);
+    flex-wrap: wrap;
+}
+
+.control-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.control-label {
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.page-range-inputs {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.page-input {
+    width: 70px;
+    text-align: center;
+}
+
+.range-separator {
+    color: var(--color-text-tertiary);
+    font-size: var(--font-size-sm);
+}
+
+.page-total {
+    color: var(--color-text-tertiary);
+    font-size: var(--font-size-sm);
+    margin-left: var(--space-xs);
+}
+
+.filename-input-group {
+    display: flex;
+    align-items: stretch;
+}
+
+.filename-input {
+    min-width: 180px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: none;
+}
+
+.extension {
+    display: flex;
+    align-items: center;
+    padding: 0 var(--space-md);
+    background: var(--color-bg-tertiary);
+    border: 1px solid var(--color-border);
+    border-left: none;
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    font-size: var(--font-size-sm);
+    color: var(--color-text-tertiary);
+}
+
+.split-btn {
+    margin-left: auto;
+}
+
+.split-btn svg {
+    flex-shrink: 0;
+}
+
+.btn-spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+.selection-info {
+    margin-top: var(--space-md);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+}
+
+.selection-info strong {
+    color: var(--color-accent);
+    font-weight: var(--font-weight-semibold);
+}

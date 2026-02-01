@@ -1,0 +1,63 @@
+{
+    "name": "toc-rock",
+    "version": "1.0.0",
+    "description": "PDF 分割与目录工具 - Apple 风格极简设计",
+    "main": "electron/main.js",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview",
+        "electron:dev": "concurrently \"vite\" \"wait-on http://localhost:5173 && electron .\"",
+        "electron:build": "vite build && electron-builder",
+        "build:mac": "vite build && electron-builder --mac"
+    },
+    "keywords": [
+        "pdf",
+        "splitter",
+        "toc",
+        "electron"
+    ],
+    "author": "",
+    "license": "MIT",
+    "dependencies": {
+        "framer-motion": "^11.0.0",
+        "pdf-lib": "^1.17.1",
+        "pdfjs-dist": "^4.0.379",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-router-dom": "^6.22.0"
+    },
+    "devDependencies": {
+        "@types/react": "^18.2.55",
+        "@types/react-dom": "^18.2.19",
+        "@vitejs/plugin-react": "^4.2.1",
+        "concurrently": "^8.2.2",
+        "electron": "^28.2.0",
+        "electron-builder": "^24.9.1",
+        "vite": "^5.1.0",
+        "wait-on": "^7.2.0"
+    },
+    "build": {
+        "appId": "com.tocrock.pdf",
+        "productName": "Toc Rock",
+        "directories": {
+            "output": "release"
+        },
+        "mac": {
+            "category": "public.app-category.productivity",
+            "target": [
+                {
+                    "target": "dmg",
+                    "arch": [
+                        "arm64"
+                    ]
+                }
+            ],
+            "icon": "build/icon.icns"
+        },
+        "files": [
+            "dist/**/*",
+            "electron/**/*"
+        ]
+    }
+}

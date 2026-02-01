@@ -1,0 +1,79 @@
+.toc-editor {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    max-height: 200px;
+    overflow: hidden;
+}
+
+.toc-editor-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-xl);
+    color: var(--color-text-tertiary);
+}
+
+.toc-editor-header {
+    display: grid;
+    grid-template-columns: 1fr 80px 60px 40px;
+    gap: var(--space-sm);
+    padding: var(--space-sm) var(--space-md);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-tertiary);
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.toc-editor-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    overflow-y: auto;
+    padding: var(--space-xs) 0;
+    list-style: none;
+}
+
+.toc-editor-item {
+    display: grid;
+    grid-template-columns: 1fr 80px 60px 40px;
+    gap: var(--space-sm);
+    padding: var(--space-xs);
+    background: var(--color-bg-secondary);
+    border-radius: var(--radius-md);
+    cursor: grab;
+}
+
+.toc-editor-item:active {
+    cursor: grabbing;
+}
+
+.toc-input-title {
+    font-size: var(--font-size-sm);
+}
+
+.toc-input-page,
+.toc-input-level {
+    text-align: center;
+    font-size: var(--font-size-sm);
+}
+
+.toc-btn-remove {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    font-size: 18px;
+    color: var(--color-text-tertiary);
+}
+
+.toc-btn-remove:hover {
+    color: var(--color-danger);
+    background: rgba(255, 59, 48, 0.1);
+}
+
+.toc-btn-add {
+    align-self: flex-start;
+    margin-top: var(--space-sm);
+}

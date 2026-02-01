@@ -1,0 +1,43 @@
+.app-layout {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background: var(--color-bg-primary);
+    overflow: hidden;
+}
+
+.titlebar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: var(--titlebar-height);
+    padding: 0 var(--space-lg);
+    flex-shrink: 0;
+}
+
+.titlebar-spacer {
+    flex: 1;
+}
+
+.titlebar-title {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-tertiary);
+    letter-spacing: 0.02em;
+}
+
+.app-content {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: var(--space-lg);
+    padding-top: 0;
+}
