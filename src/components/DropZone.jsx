@@ -27,8 +27,11 @@ function DropZone() {
         const files = e.dataTransfer?.files
         if (files && files.length > 0) {
             const file = files[0]
-            if (file.type === 'application/pdf') {
+            // 宽松的 PDF 类型检查
+            if (file.type === 'application/pdf' || file.name.toLowerCase().endsWith('.pdf')) {
                 loadPdf(file)
+            } else {
+                alert('请选择 PDF 文件')
             }
         }
     }, [loadPdf])
@@ -36,7 +39,7 @@ function DropZone() {
     const handleClick = useCallback(() => {
         const input = document.createElement('input')
         input.type = 'file'
-        input.accept = 'application/pdf'
+        input.accept = 'application/pdf,.pdf' // 增加 .pdf 扩展名支持
         input.onchange = (e) => {
             const file = e.target.files?.[0]
             if (file) {

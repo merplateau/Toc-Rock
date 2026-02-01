@@ -1,8 +1,9 @@
 import { createContext, useContext, useState, useCallback, useRef, useEffect } from 'react'
 import * as pdfjsLib from 'pdfjs-dist'
+import pdfWorker from 'pdfjs-dist/build/pdf.worker.min?url'
 
-// 设置 PDF.js worker
-pdfjsLib.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.min.js`
+// 设置 PDF.js worker (使用本地文件)
+pdfjsLib.GlobalWorkerOptions.workerSrc = pdfWorker
 
 const PdfContext = createContext(null)
 
